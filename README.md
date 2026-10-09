@@ -1,6 +1,6 @@
 # ✦ Studix — Daily Planner
 
-**Plan your day. Stay focused. Make progress.**
+**Plan your day/ Stay focused/ Make progress.**
 
 Studix is a simple and elegant daily planner designed to help you organize your tasks, manage your time, and track your daily progress.
 
@@ -22,22 +22,13 @@ Studix is a simple and elegant daily planner designed to help you organize your 
 * JavaScript
 * Browser Local Storage
 
-## 📂 Project Structure
-
-```text
-Studix/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
 ## 💻 Getting Started
 
 1. Download or clone this repository.
 2. Open the project folder.
 3. Open `index.html` in your browser.
 4. Start adding tasks and organizing your day!
+   !Don't Copy!
 
 No installation or additional dependencies are required.
 
