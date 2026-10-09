@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c5ce7">
+  <title>Studix | Daily Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">✦</span><span>Studix</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+          <h1>Make Your Day <span class="wave">✦</span></h1>
+          <p class="subtitle">
+            Plan your tasks and take one step at a time.
+          </p>
+        </div>
+
+        <label class="date-control">
+          <span>Select Date</span>
+          <input type="date" id="selectedDate" aria-label="Select planner date">
+        </label>
+      </header>
+
+      <section class="summary-grid" aria-label="Daily summary">
+        <article class="summary-card focus-card">
+          <div class="summary-top">
+            <span>Today's Progress</span>
+            <span class="summary-icon">↗</span>
+          </div>
+
+          <div class="progress-line">
+            <div id="progressBar"></div>
+          </div>
+
+          <div class="summary-bottom">
+            <strong id="progressText">0%</strong>
+            <span id="progressCount">0 of 0 tasks</span>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-top">
+            <span>Total Tasks</span>
+            <span class="summary-icon lilac">☷</span>
+          </div>
+          <strong class="stat-number" id="totalCount">0</strong>
+          <span class="stat-caption">Tasks planned for today</span>
+        </article>
+
+        <article class="summary-card">
+          <div class="summary-top">
+            <span>Completed</span>
+            <span class="summary-icon mint">✓</span>
+          </div>
+          <strong class="stat-number" id="doneCount">0</strong>
+          <span class="stat-caption">One step forward</span>
+        </article>
+      </section>
+
+      <section class="planner-layout">
+        <div class="tasks-panel panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">DAILY TASKS</p>
+              <h2>My Tasks</h2>
+            </div>
+            <span class="today-pill" id="dateLabel">Daily Plan</span>
+          </div>
+
+          <form id="taskForm" class="task-form">
+            <div class="field title-field">
+              <label for="taskTitle">Task Title</label>
+              <input id="taskTitle" type="text" maxlength="100" placeholder="e.g. Review science notes..." required>
+            </div>
+
+            <div class="field time-field">
+              <label for="taskTime">Time</label>
+              <input id="taskTime" type="time">
+            </div>
+
+            <button class="add-button" type="submit">
+              <span>＋</span> Add Task
+            </button>
+          </form>
+
+          <div class="filter-row">
+            <span id="listHeading">Tasks for This Day</span>
+
+            <div class="filters" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" data-filter="all" type="button">All</button>
+              <button class="filter-btn" data-filter="active" type="button">Pending</button>
+              <button class="filter-btn" data-filter="done" type="button">Completed</button>
+            </div>
+          </div>
+
+          <div id="taskList" class="task-list"></div>
+
+          <div id="emptyState" class="empty-state">
+            <span class="empty-icon">✧</span>
+            <strong>No tasks yet</strong>
+            <p>Add your first task and get started!</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Made for better days <span>♥</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
